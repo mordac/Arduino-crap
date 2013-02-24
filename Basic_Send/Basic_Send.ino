@@ -41,7 +41,7 @@ void loop()
     
     ledTimer.set(100);
     
-    rf12_sendStart(0, &outData, sizeof outData);
+    rf12_sendStart(RF12_HDR_ACK | 1, &outData, sizeof outData);
     pendingOutput = 0;
   }
   
